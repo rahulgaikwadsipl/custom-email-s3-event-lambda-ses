@@ -1,0 +1,92 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "logs:ListTagsLogGroup",
+                "logs:DisassociateKmsKey",
+                "logs:DeleteSubscriptionFilter",
+                "logs:DescribeLogGroups",
+                "logs:UntagLogGroup",
+                "logs:DeleteLogGroup",
+                "logs:DescribeLogStreams",
+                "logs:DescribeSubscriptionFilters",
+                "logs:StartQuery",
+                "logs:DescribeMetricFilters",
+                "logs:CreateLogGroup",
+                "logs:CreateExportTask",
+                "logs:PutMetricFilter",
+                "logs:CreateLogStream",
+                "logs:DeleteMetricFilter",
+                "logs:TagLogGroup",
+                "logs:DeleteRetentionPolicy",
+                "logs:AssociateKmsKey",
+                "logs:FilterLogEvents",
+                "logs:PutSubscriptionFilter",
+                "logs:PutRetentionPolicy",
+                "logs:GetLogGroupFields"
+            ],
+            "Resource": "arn:aws:logs:yourawsregion:yourawsaccountid:log-group:*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "ses:SendEmail",
+                "s3:GetObjectAcl",
+                "s3:GetObject",
+                "ses:SendRawEmail",
+                "logs:GetLogEvents",
+                "s3:ListBucket",
+                "s3:GetBucketAcl",
+                "logs:DeleteLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:yourawsregion:yourawsaccountid:log-group:*:log-stream:*",
+                "arn:aws:ses:yourawsregion:yourawsaccountid:identity/*",
+                "arn:aws:s3:::yourbucketname"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "ses:ListTemplates",
+                "logs:GetLogRecord",
+                "ses:ListCustomVerificationEmailTemplates",
+                "logs:GetLogDelivery",
+                "logs:ListLogDeliveries",
+                "ses:ListConfigurationSets",
+                "logs:DeleteResourcePolicy",
+                "ses:SendTemplatedEmail",
+                "logs:CancelExportTask",
+                "logs:DeleteLogDelivery",
+                "logs:DescribeQueryDefinitions",
+                "ses:GetTemplate",
+                "logs:PutDestination",
+                "logs:DescribeResourcePolicies",
+                "ses:ListIdentities",
+                "logs:DescribeDestinations",
+                "logs:DescribeQueries",
+                "logs:PutDestinationPolicy",
+                "logs:StopQuery",
+                "logs:TestMetricFilter",
+                "logs:DeleteDestination",
+                "logs:DeleteQueryDefinition",
+                "logs:PutQueryDefinition",
+                "ses:ListIdentityPolicies",
+                "logs:CreateLogDelivery",
+                "logs:PutResourcePolicy",
+                "logs:DescribeExportTasks",
+                "logs:GetQueryResults",
+                "s3:ListAllMyBuckets",
+                "logs:UpdateLogDelivery",
+                "ses:ListVerifiedEmailAddresses"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
